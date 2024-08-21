@@ -12,6 +12,11 @@ service / on new http:Listener(9090) {
         if name is () {
             return error("name should not be empty!");
         }
-        return string `Hello, ${name} so cool `;
+
+    string grin = "\u{1F600}";
+
+        return string `Hello, ${name} so cool` + grin;
+
     }
+
 }
